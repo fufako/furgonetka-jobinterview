@@ -31,6 +31,7 @@
 }
 .navigation{
   .navigation__tabs-container{
+    padding-left: 10px;
     display: flex;
     gap:5px;
     .navigation__panel, .navigation__do-wyslania{
@@ -51,7 +52,7 @@
     
   }
   .navigation__underline-container{
-    height: 60px;
+    height: 25px;
     .navigation__upper-underline{
       height: 5px;
       background-color: @secondary-theme;
@@ -64,4 +65,31 @@
     }
   }
 }
+.dashboard{
+  .dashboard__main-container{
 
+  }
+}
+.promotion {
+  background-color: @secondary-background;
+  padding: 25px;
+  border-radius: 8px;
+  .promotion__main-info{
+    padding: 20px 10px;
+    background-color: @primary-background;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 25px 25px 25px 290px;
+  }
+  .promotion__additional-info-container{
+    display: flex;
+    justify-content: space-between;
+    .promotion__image{
+      width: 200px;
+      height: 260px;
+      position: relative;
+      top: -38px;
+      left: 40px;
+    }
+  }
+}

@@ -23,6 +23,7 @@
   font-size: 20px;
 }
 .navigation .navigation__tabs-container {
+  padding-left: 10px;
   display: flex;
   gap: 5px;
 }
@@ -45,7 +46,7 @@
   height: 15px;
 }
 .navigation .navigation__underline-container {
-  height: 60px;
+  height: 25px;
 }
 .navigation .navigation__underline-container .navigation__upper-underline {
   height: 5px;
@@ -56,4 +57,27 @@
   height: 10px;
   background-color: #ffffff;
   border-radius: 0 0 8px 8px;
+}
+.promotion {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+}
+.promotion .promotion__main-info {
+  padding: 20px 10px;
+  background-color: #f4f9fc;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 25px 25px 25px 290px;
+}
+.promotion .promotion__additional-info-container {
+  display: flex;
+  justify-content: space-between;
+}
+.promotion .promotion__additional-info-container .promotion__image {
+  width: 200px;
+  height: 260px;
+  position: relative;
+  top: -38px;
+  left: 40px;
 }

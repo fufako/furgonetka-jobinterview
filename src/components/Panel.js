@@ -1,3 +1,4 @@
+import Man from "../images/man.png"
 const Panel = () => {
   return (
     <>
@@ -13,31 +14,34 @@ const Panel = () => {
               ile może zaoszczędzić wybierając innego kuriera.
             </div>
             <div className="promotion__additional-info-container">
-              <div className="promotion__img">
-                <img src="" alt="" />
-              </div>
+              <img src={Man} alt="" className="promotion__image" />
+
               <div className="promotion__costs">
                 <p>Koszt wysyłki 4 paczek</p>
-                <ul>
-                  <li>
-                    <span className="promotion__courier-fedex">
-                      Fed <span>Ex</span>
-                    </span>
-                    <span className="promotion__price">67,36 zł</span>
-                  </li>
-                  <li>
-                    <span className="promotion__courier-dpd">DPD></span>
-                    <span className="promotion__price">77,52 zł</span>
-                  </li>
-                  <li>
-                    <span className="promotion__courier-fedex">DHL</span>
-                    <span className="promotion__price">83,64 zł</span>
-                  </li>
-                  <li>
-                    <span className="promotion__courier-fedex">UPS</span>
-                    <span className="promotion__price">117,64 zł</span>
-                  </li>
-                </ul>
+                <div className="promotion__courier-container">
+                  <span className="promotion__courier-fedex">
+                    Fed<span>Ex</span>
+                  </span>
+                  <span className="promotion__price"> 67,36 zł</span>
+                </div>
+                <div className="promotion__courier-container">
+                  <span className="promotion__courier-dpd">DPD</span>
+                  <span className="promotion__price"> 77,52 zł</span>
+                </div>
+                <div className="promotion__courier-container">
+                  <span className="promotion__courier-fedex">DHL</span>
+                  <span className="promotion__price"> 83,64 zł</span>
+                </div>
+                <div className="promotion__courier-container">
+                  <span className="promotion__courier-fedex">UPS</span>
+                  <span className="promotion__price"> 117,64 zł</span>
+                </div>
+              </div>
+              <div className="promotion__savings">
+                Stefan oszczędza miesięcznie od 752 zł do 1 156 zł na zmianie
+                swojego dostawcy usług kurierskich. <br /> Bądź jak Stefan -
+                oszczędzaj analizując, która oferta aktualnie jest dla Ciebie
+                najbardziej opłacalna
               </div>
             </div>
           </section>
