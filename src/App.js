@@ -1,41 +1,39 @@
 import Header from "./components/Header"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useLocation } from "react-router-dom"
-
 import "./App.css"
-import { useEffect } from "react"
+
 function App() {
-  const [items, setItem] = useState([])
+  const [items, setItems] = useState([])
+  const [total, setTotal] = useState(0)
   const [active, setActive] = useState()
 
   let location = useLocation()
 
   const addToSaldo = (item) => {
-    const nameToFind = item.name
-    const exists = Boolean(items.find((item) => item.name === nameToFind))
-    if (!exists) {
-      setItem((prevItems) => [...prevItems, item])
-      item.amount += 1
-    } else {
-      item.amount += 1
-    }
+    setItems((prevItems) => [...prevItems, item])
+    setTotal(total + Math.round(item.price.slice(0, -3) * 100) / 100)
+
+    console.log(item)
   }
-  const removeFromCart = (item) => {
+  console.log(items)
+
+  const removeFromSaldo = (item) => {
     const keyToRemove = item.key
-    setItem(items.filter((item) => item.key !== keyToRemove))
+    setItems(items.filter((item) => item.key !== keyToRemove))
   }
-  console.log(active)
 
   useEffect(() => {
     setActive(location.pathname)
-  }, [location])
+  }, [location, items])
   return (
     <>
       <Header
         items={items}
         addToSaldo={addToSaldo}
-        removeFromCart={removeFromCart}
+        removeFromSaldo={removeFromSaldo}
         active={active}
+        total={total}
       />
     </>
   )

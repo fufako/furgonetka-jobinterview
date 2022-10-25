@@ -8,7 +8,7 @@ import SendIcon from "../images/send_icon.png"
 import { useEffect } from "react"
 import { useRef } from "react"
 const Header = (props) => {
-  const { items, addToSaldo, handleTotal, removeFromCart, active } = props
+  const { items, addToSaldo, removeFromSaldo, active, total } = props
 
   const panelNav = useRef()
   const sendNav = useRef()
@@ -25,6 +25,10 @@ const Header = (props) => {
       return
     }
   }
+  const resetActive = () => {
+    sendNav.current.classList.remove("navigation__do-wyslania--active")
+    panelNav.current.classList.remove("navigation__panel--active")
+  }
 
   useEffect(() => {
     handleActive(active)
@@ -36,7 +40,14 @@ const Header = (props) => {
           <img src={Logo} alt="logo-furgonetka" className="header__logo" />
         </Link>
         <Link to="furgonetka/saldo" style={{ textDecoration: "none" }}>
-          <div className="header__saldo">Saldo: 0,00 zł</div>
+          <div
+            className="header__saldo"
+            onClick={() => {
+              resetActive()
+            }}
+          >
+            Saldo: {Math.round(total * 100) / 100} zł
+          </div>
         </Link>
       </header>
 
@@ -73,12 +84,18 @@ const Header = (props) => {
         <Route path="/furgonetka/" element={<Panel />} />
         <Route
           path="furgonetka/do-wyslania"
-          element={<Send addToSaldo={addToSaldo} handleTotal={handleTotal} />}
+          element={<Send addToSaldo={addToSaldo} />}
         />
 
         <Route
           path="furgonetka/saldo"
-          element={<Saldo items={items} removeFromCart={removeFromCart} />}
+          element={
+            <Saldo
+              items={items}
+              removeFromSaldo={removeFromSaldo}
+              total={total}
+            />
+          }
         />
       </Routes>
     </>

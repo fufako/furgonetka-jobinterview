@@ -20,11 +20,10 @@ const Send = (props) => {
       <div className="send">
         <div className="send__items-container">
           {packages.map((item) => (
-            <div className="send__item">
+            <div className="send__item" key={item.key}>
               <img
                 src={item.src}
                 alt="package-icon"
-                key={item.key}
                 className="send__item-img"
               />
               <div className="send__item-info">
@@ -33,9 +32,7 @@ const Send = (props) => {
               </div>
               <button
                 className="send__item-send"
-                onClick={() => {
-                  addToSaldo(item)
-                }}
+                onClick={addToSaldo.bind(this, item)}
               >
                 Wyślij paczkę!
               </button>
