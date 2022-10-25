@@ -11,8 +11,8 @@ function Header(props) {
         <Link to="furgonetka">
           <img src={Logo} alt="logo-furgonetka" className="header__logo" />
         </Link>
-        <Link to="furgonetka/saldo">
-          <div className="header__saldo">Saldo</div>
+        <Link to="furgonetka/saldo" style={{ "text-decoration": "none" }}>
+          <div className="header__saldo">Saldo: 0,00 zł</div>
         </Link>
       </header>
 

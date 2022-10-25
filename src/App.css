@@ -1,6 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.main {
+  background-color: #f4f9fc;
+  padding: 0 10%;
+}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: red;
+}
+.header .header__logo {
+  width: 230px;
+  height: 80px;
+}
+.header .header__saldo {
+  padding: 5px 10px;
+  border: 1px solid #b3cadc;
+  border-radius: 4px;
+  color: #6c717a;
+  font-size: 20px;
 }
