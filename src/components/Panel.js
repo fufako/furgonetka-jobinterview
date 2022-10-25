@@ -1,4 +1,5 @@
 import Man from "../images/man.png"
+import Phone from "../images/phone-icon.png"
 const Panel = () => {
   return (
     <>
@@ -8,7 +9,9 @@ const Panel = () => {
             <h4 className="promotion__title">Jak wysyłać jeszcze taniej?</h4>
             <div className="promotion__main-info">
               Stefan prowadzi mały sklep internetowy z modelami statków do
-              sklejania. Dziennie wysyła od 2 do 4 paczek o wadze około 5 kg. Z
+              sklejania. Dziennie wysyła
+              <span className="promotion__strong">od 2 do 4 paczek</span> o
+              wadze około <span className="promotion__strong">5 kg</span>. Z
               uwagi na to, że wszystko w ostatnim czasie drożeje, Stefan
               postanowił przeliczyć, ile kosztuje go wysyłanie paczek obecnie i
               ile może zaoszczędzić wybierając innego kuriera.
@@ -29,19 +32,44 @@ const Panel = () => {
                   <span className="promotion__price"> 77,52 zł</span>
                 </div>
                 <div className="promotion__courier-container">
-                  <span className="promotion__courier-fedex">DHL</span>
+                  <span className="promotion__courier-dhl">DHL</span>
                   <span className="promotion__price"> 83,64 zł</span>
                 </div>
                 <div className="promotion__courier-container">
-                  <span className="promotion__courier-fedex">UPS</span>
+                  <span className="promotion__courier-ups">UPS</span>
                   <span className="promotion__price"> 117,64 zł</span>
                 </div>
               </div>
               <div className="promotion__savings">
-                Stefan oszczędza miesięcznie od 752 zł do 1 156 zł na zmianie
-                swojego dostawcy usług kurierskich. <br /> Bądź jak Stefan -
-                oszczędzaj analizując, która oferta aktualnie jest dla Ciebie
-                najbardziej opłacalna
+                Stefan
+                <span className="promotion__strong">
+                  oszczędza miesięcznie od 752 zł do 1 156 zł
+                </span>
+                na zmianie swojego dostawcy usług kurierskich. <br />
+                <br /> Bądź jak Stefan - oszczędzaj analizując, która oferta
+                aktualnie jest dla Ciebie najbardziej opłacalna
+              </div>
+            </div>
+          </section>
+          <section className="dashboard__verify-number verify-number">
+            <div className="verify-number__container">
+              <img
+                src={Phone}
+                alt="phone-icon"
+                className="verify-number__image"
+              />
+              <div className="verify-number__content">
+                <h4>Zweryfikuj swój numer telefonu</h4>
+                <p>
+                  Zweryfikuj swój numer telefonu już teraz, a przesyłki, na
+                  które czekasz, same pojawią się w panelu i w aplikacji
+                  mobilnej Furgonetka.
+                </p>
+                <button className="verify-number__button">
+                  <span className="verify-number__strong">
+                    ZWERYFIKUJ NUMER TERAZ
+                  </span>
+                </button>
               </div>
             </div>
           </section>

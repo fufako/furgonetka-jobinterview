@@ -65,15 +65,14 @@
     }
   }
 }
-.dashboard{
-  .dashboard__main-container{
 
-  }
-}
 .promotion {
   background-color: @secondary-background;
   padding: 25px;
   border-radius: 8px;
+  .promotion__strong{
+    font-weight: bold;
+  }
   .promotion__main-info{
     padding: 20px 10px;
     background-color: @primary-background;
@@ -84,12 +83,93 @@
   .promotion__additional-info-container{
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
     .promotion__image{
       width: 200px;
       height: 260px;
       position: relative;
-      top: -38px;
+      top: -78px;
       left: 40px;
+    }
+    .promotion__courier-container{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .promotion__courier-fedex{
+        padding:  5px 10px;
+        margin:10px 0;
+        background-color: #e3e4e5;
+        color: #4d148c;
+        text-align: center;
+        width: 40px;
+        border-radius: 4px;
+        span{
+          color:#f47120;
+        }
+      }
+      .promotion__courier-dpd{
+        padding:  5px 10px;
+        margin:10px 0;
+        background-color: #e61c4a;
+        color: #fff;
+        text-align: center;
+        width: 40px;
+        border-radius: 4px;
+        
+      }
+      .promotion__courier-dhl{
+        padding:  5px 10px;
+        margin:10px 0;
+        background-color: #fc0;
+        color: #c00;
+        text-align: center;
+        width: 40px;
+        border-radius: 4px;
+        
+      }
+      .promotion__courier-ups{
+        padding:  5px 10px;
+        margin:10px 0;
+        background-color: #693121;
+        color: #fd0;
+        text-align: center;
+        width: 40px;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+.verify-number{
+  background-color: @secondary-background;
+  margin-top: 15px;
+  padding: 25px;
+  border-radius: 8px;
+  border:2px solid rgba(4,109,180,.6);
+  .verify-number__strong{
+    font-weight: bold;
+  }
+  .verify-number__container{
+    display: flex;
+    gap:40px;
+
+    .verify-number__image{
+      width: 150px;
+      height: 150px;
+    }
+    .verify-number__content{
+      display: flex;
+      flex-direction: column;
+      gap:30px;
+     
+      .verify-number__button{
+        color:@secondary-background;
+        width: fit-content;
+        min-width: 120px;
+        padding: 8px 18px;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%);
+        border: 1px solid rgba(4,109,180,.6);
+        background-color:  #1f96d1;
+      }
     }
   }
 }
