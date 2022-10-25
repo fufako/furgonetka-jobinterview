@@ -8,7 +8,7 @@
   padding: 0;
   margin: 0;
 }
-.main{
+#root{
   background-color: @primary-background;
   padding: 0 10%;
 }
@@ -29,3 +29,39 @@
     
   }
 }
+.navigation{
+  .navigation__tabs-container{
+    display: flex;
+    gap:5px;
+    .navigation__panel, .navigation__do-wyslania{
+      padding:10px 15px;
+      background-color: @primary-theme;
+      display: flex;
+      align-items: center;
+      gap:5px;
+      border-radius: 8px 8px 0 0;
+      .navigation__text{
+          color:@secondary-background;
+      }
+      .navigation__icon{
+        width: 20px;
+        height: 15px;
+      }
+    }
+    
+  }
+  .navigation__underline-container{
+    height: 60px;
+    .navigation__upper-underline{
+      height: 5px;
+      background-color: @secondary-theme;
+      border-radius: 8px 8px 0 0;
+    }
+    .navigation__lower-underline{
+      height: 10px;
+      background-color: @secondary-background;
+      border-radius: 0 0 8px 8px;
+    }
+  }
+}
+
