@@ -42,29 +42,38 @@
   .navigation__tabs-container{
     padding-left: 10px;
     display: flex;
-    gap:5px;
+    position: relative;
     .navigation__panel, .navigation__do-wyslania{
       padding:10px 15px;
-      background-color: @primary-theme;
+      background-color: @secondary-background;
       display: flex;
       align-items: center;
       gap:5px;
       border-radius: 8px 8px 0 0;
       .navigation__text{
-          color:@secondary-background;
+          color:@primary-theme;
       }
       .navigation__icon{
         width: 20px;
         height: 15px;
       }
     }
-    
+    .navigation__panel--active, .navigation__do-wyslania--active{
+      background-color: @primary-theme;
+      .navigation__text{
+        color:@secondary-background;
+    }
+
+    }
+    .navigation__panel:hover, .navigation__do-wyslania:hover{
+      background: linear-gradient(180deg,#6EA6D6 20.31%,#6696BF 100%);
+    }
   }
   .navigation__underline-container{
     height: 25px;
     .navigation__upper-underline{
       height: 5px;
-      background-color: @secondary-theme;
+      background-color: @primary-theme;
       border-radius: 8px 8px 0 0;
       box-shadow: 0 2px 32px rgb(6 83 146 / 4%), 0 0 0 1px #e7eff6;
     }
@@ -88,7 +97,7 @@
   background-color: @secondary-background;
   padding: 25px;
   border-radius: 8px;
-  height: 360px;
+  height: fit-content;
   box-shadow: 0 2px 32px rgb(6 83 146 / 4%), 0 0 0 1px #e7eff6;
   .promotion__strong{
     font-weight: bold;
@@ -200,6 +209,10 @@
         border: 1px solid rgba(4,109,180,.6);
         background-color:  #1f96d1;
       }
+      .verify-number__button:hover{
+        background: #1ea3e6;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -224,6 +237,11 @@
     }
     .news-text{
       word-break: normal;
+    }
+    .news-text:hover{
+      word-break: normal;
+      color: @secondary-theme;
+      cursor: pointer;
     }
     .news__more{
       text-align: right;

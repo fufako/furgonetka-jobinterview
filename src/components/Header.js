@@ -5,8 +5,30 @@ import Send from "./Send"
 import Logo from "../images/furgonetka.png"
 import PanelIcon from "../images/panel_icon.png"
 import SendIcon from "../images/send_icon.png"
-function Header(props) {
-  const { items, addToCart, handleTotal, removeFromCart } = props
+import { useEffect } from "react"
+import { useRef } from "react"
+const Header = (props) => {
+  const { items, addToCart, handleTotal, removeFromCart, active } = props
+
+  const panelNav = useRef()
+  const sendNav = useRef()
+
+  const handleActive = (active) => {
+    if (active === "/furgonetka") {
+      panelNav.current.classList.add("navigation__panel--active")
+      sendNav.current.classList.remove("navigation__do-wyslania--active")
+      return
+    }
+    if (active === "/furgonetka/do-wyslania") {
+      sendNav.current.classList.add("navigation__do-wyslania--active")
+      panelNav.current.classList.remove("navigation__panel--active")
+      return
+    }
+  }
+
+  useEffect(() => {
+    handleActive(active)
+  }, [active])
   return (
     <>
       <header className="header">
@@ -21,7 +43,7 @@ function Header(props) {
       <nav className="navigation">
         <div className="navigation__tabs-container">
           <Link to="furgonetka" style={{ textDecoration: "none" }}>
-            <div className="navigation__panel navigation__panel--active">
+            <div className="navigation__panel" ref={panelNav}>
               <img
                 src={PanelIcon}
                 alt="panel-icon"
@@ -31,7 +53,7 @@ function Header(props) {
             </div>
           </Link>
           <Link to="furgonetka/do-wyslania" style={{ textDecoration: "none" }}>
-            <div className="navigation__do-wyslania navigation__do-wyslania--active">
+            <div className="navigation__do-wyslania" ref={sendNav}>
               <img
                 src={SendIcon}
                 alt="send-icon"

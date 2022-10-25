@@ -40,12 +40,12 @@
 .navigation .navigation__tabs-container {
   padding-left: 10px;
   display: flex;
-  gap: 5px;
+  position: relative;
 }
 .navigation .navigation__tabs-container .navigation__panel,
 .navigation .navigation__tabs-container .navigation__do-wyslania {
   padding: 10px 15px;
-  background-color: #689cca;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -53,19 +53,31 @@
 }
 .navigation .navigation__tabs-container .navigation__panel .navigation__text,
 .navigation .navigation__tabs-container .navigation__do-wyslania .navigation__text {
-  color: #ffffff;
+  color: #689cca;
 }
 .navigation .navigation__tabs-container .navigation__panel .navigation__icon,
 .navigation .navigation__tabs-container .navigation__do-wyslania .navigation__icon {
   width: 20px;
   height: 15px;
 }
+.navigation .navigation__tabs-container .navigation__panel--active,
+.navigation .navigation__tabs-container .navigation__do-wyslania--active {
+  background-color: #689cca;
+}
+.navigation .navigation__tabs-container .navigation__panel--active .navigation__text,
+.navigation .navigation__tabs-container .navigation__do-wyslania--active .navigation__text {
+  color: #ffffff;
+}
+.navigation .navigation__tabs-container .navigation__panel:hover,
+.navigation .navigation__tabs-container .navigation__do-wyslania:hover {
+  background: linear-gradient(180deg, #6EA6D6 20.31%, #6696BF 100%);
+}
 .navigation .navigation__underline-container {
   height: 25px;
 }
 .navigation .navigation__underline-container .navigation__upper-underline {
   height: 5px;
-  background-color: #81b3db;
+  background-color: #689cca;
   border-radius: 8px 8px 0 0;
   box-shadow: 0 2px 32px rgba(6, 83, 146, 0.04), 0 0 0 1px #e7eff6;
 }
@@ -85,7 +97,7 @@
   background-color: #ffffff;
   padding: 25px;
   border-radius: 8px;
-  height: 360px;
+  height: fit-content;
   box-shadow: 0 2px 32px rgba(6, 83, 146, 0.04), 0 0 0 1px #e7eff6;
 }
 .promotion .promotion__strong {
@@ -196,6 +208,10 @@
   border: 1px solid rgba(4, 109, 180, 0.6);
   background-color: #1f96d1;
 }
+.verify-number .verify-number__container .verify-number__content .verify-number__button:hover {
+  background: #1ea3e6;
+  cursor: pointer;
+}
 .dashboard__side-container {
   height: 100vh;
   width: 30%;
@@ -218,6 +234,11 @@
 }
 .dashboard__side-container .news .news-text {
   word-break: normal;
+}
+.dashboard__side-container .news .news-text:hover {
+  word-break: normal;
+  color: #81b3db;
+  cursor: pointer;
 }
 .dashboard__side-container .news .news__more {
   text-align: right;
