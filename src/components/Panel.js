@@ -1,5 +1,8 @@
 import Man from "../images/man.png"
 import Phone from "../images/phone-icon.png"
+import NewsIcon1 from "../images/news-icon1.png"
+import NewsIcon2 from "../images/news-icon2.png"
+import NewsIcon3 from "../images/news-icon3.png"
 const Panel = () => {
   return (
     <>
@@ -10,40 +13,59 @@ const Panel = () => {
             <div className="promotion__main-info">
               Stefan prowadzi mały sklep internetowy z modelami statków do
               sklejania. Dziennie wysyła
-              <span className="promotion__strong">od 2 do 4 paczek</span> o
-              wadze około <span className="promotion__strong">5 kg</span>. Z
+              <span className="promotion__strong">
+                &nbsp;od 2 do 4 paczek&nbsp;
+              </span>
+              o wadze około <span className="promotion__strong">5 kg</span>. Z
               uwagi na to, że wszystko w ostatnim czasie drożeje, Stefan
               postanowił przeliczyć, ile kosztuje go wysyłanie paczek obecnie i
               ile może zaoszczędzić wybierając innego kuriera.
             </div>
             <div className="promotion__additional-info-container">
-              <img src={Man} alt="" className="promotion__image" />
+              <div className="promotion__image-container">
+                <img src={Man} alt="" className="promotion__image" />
+              </div>
 
               <div className="promotion__costs">
-                <p>Koszt wysyłki 4 paczek</p>
+                <p>
+                  Koszt wysyłki{" "}
+                  <span className="promotion__strong">&nbsp;4 paczek</span>
+                </p>
                 <div className="promotion__courier-container">
                   <span className="promotion__courier-fedex">
                     Fed<span>Ex</span>
                   </span>
-                  <span className="promotion__price"> 67,36 zł</span>
+                  <span className="promotion__price">
+                    {" "}
+                    <span className="promotion__strong">67,36 zł</span>
+                  </span>
                 </div>
                 <div className="promotion__courier-container">
                   <span className="promotion__courier-dpd">DPD</span>
-                  <span className="promotion__price"> 77,52 zł</span>
+                  <span className="promotion__price">
+                    {" "}
+                    <span className="promotion__strong">77,52 zł</span>
+                  </span>
                 </div>
                 <div className="promotion__courier-container">
                   <span className="promotion__courier-dhl">DHL</span>
-                  <span className="promotion__price"> 83,64 zł</span>
+                  <span className="promotion__price">
+                    {" "}
+                    <span className="promotion__strong">83,64 zł</span>
+                  </span>
                 </div>
                 <div className="promotion__courier-container">
                   <span className="promotion__courier-ups">UPS</span>
-                  <span className="promotion__price"> 117,64 zł</span>
+                  <span className="promotion__price">
+                    {" "}
+                    <span className="promotion__strong">117,64 zł</span>
+                  </span>
                 </div>
               </div>
               <div className="promotion__savings">
-                Stefan
+                Stefan&nbsp;
                 <span className="promotion__strong">
-                  oszczędza miesięcznie od 752 zł do 1 156 zł
+                  oszczędza miesięcznie od 752 zł do 1 156 zł &nbsp;
                 </span>
                 na zmianie swojego dostawcy usług kurierskich. <br />
                 <br /> Bądź jak Stefan - oszczędzaj analizując, która oferta
@@ -74,7 +96,36 @@ const Panel = () => {
             </div>
           </section>
         </div>
-        <div className="dashboard__side-container"></div>
+        <div className="dashboard__side-container">
+          <section className="dashboard__news news">
+            <h4>Aktualności na blogu</h4>
+            <div className="news-item">
+              <img src={NewsIcon1} alt="news-icon" className="news-img" />
+              <p className="news-text">
+                Zmiany w metodach nadania i dostawy w formularzu zamówienia na
+                Furgonetka.pl
+              </p>
+            </div>
+            <div className="news-item">
+              <img src={NewsIcon2} alt="news-icon" className="news-img" />
+              <p className="news-text">
+                Nowy przewoźnik przesyłek paletowych Pall-Ex w ofercie
+                Furgonetki
+              </p>
+            </div>
+            <div className="news-item">
+              <img src={NewsIcon3} alt="news-icon" className="news-img" />
+              <p className="news-text">
+                Dopłaty UPS za duże paczki i elementy niestandardowe w okresie
+                szczytu paczkowego
+              </p>
+            </div>
+            <div className="news__more">
+              Więcej na{" "}
+              <a href="https://furgonetka.pl/blog/">blogu Furgonetka.pl</a>
+            </div>
+          </section>
+        </div>
       </div>
     </>
   )

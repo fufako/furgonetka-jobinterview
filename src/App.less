@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @primary-theme: #689cca;
 @secondary-theme: #81b3db;
 
@@ -7,18 +8,21 @@
 *{
   padding: 0;
   margin: 0;
+  
 }
 #root{
   background-color: @primary-background;
-  padding: 0 10%;
+  padding: 0 15%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px!important;
 }
 .header{
   display: flex;
   justify-content: space-between;
   align-items: center;
   .header__logo{
-    width: 230px;
-    height: 80px;
+    width: 180px;
+    height: 60px;
   }
   .header__saldo{
     padding:5px 10px;
@@ -66,38 +70,59 @@
   }
 }
 
+.dashboard{
+  display: flex;
+  gap: 15px;
+  .dashboard__main-container{
+    width: 70%;
+  }
+ 
+}
 .promotion {
   background-color: @secondary-background;
   padding: 25px;
   border-radius: 8px;
+  height: 360px;
   .promotion__strong{
     font-weight: bold;
   }
   .promotion__main-info{
-    padding: 20px 10px;
+    text-align: justify;
     background-color: @primary-background;
     border-radius: 8px;
     margin-top: 10px;
     padding: 25px 25px 25px 290px;
+    line-height: 1.4rem;
   }
   .promotion__additional-info-container{
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-    .promotion__image{
-      width: 200px;
-      height: 260px;
-      position: relative;
-      top: -78px;
-      left: 40px;
+    .promotion__image-container{
+      width: 220px;
+      .promotion__image{
+        width: 160px;
+        height: 220px;
+        position: relative;
+        top: -110px;
+        left: 40px;
+      }
+      
+    }
+    
+    
+    .promotion__savings{
+      text-align: justify;
+      word-break:normal;
+      width: 40%;
     }
     .promotion__courier-container{
       display: flex;
       align-items: center;
       gap: 10px;
       .promotion__courier-fedex{
-        padding:  5px 10px;
-        margin:10px 0;
+        padding:  2px 10px;
+        margin:8px 0;
         background-color: #e3e4e5;
         color: #4d148c;
         text-align: center;
@@ -108,8 +133,8 @@
         }
       }
       .promotion__courier-dpd{
-        padding:  5px 10px;
-        margin:10px 0;
+        padding:  2px 10px;
+        margin:5px 0;
         background-color: #e61c4a;
         color: #fff;
         text-align: center;
@@ -118,8 +143,8 @@
         
       }
       .promotion__courier-dhl{
-        padding:  5px 10px;
-        margin:10px 0;
+        padding:  2px 10px;
+        margin:5px 0;
         background-color: #fc0;
         color: #c00;
         text-align: center;
@@ -128,8 +153,8 @@
         
       }
       .promotion__courier-ups{
-        padding:  5px 10px;
-        margin:10px 0;
+        padding:  2px 10px;
+        margin:5px 0;
         background-color: #693121;
         color: #fd0;
         text-align: center;
@@ -170,6 +195,31 @@
         border: 1px solid rgba(4,109,180,.6);
         background-color:  #1f96d1;
       }
+    }
+  }
+}
+.dashboard__side-container{
+  height: 100vh;
+  width: 30%;
+  background-color: @secondary-background;
+  border-radius: 8px;
+  .news{
+    padding:25px;
+    .news-item{
+        display: flex;
+        gap:10px;
+        margin:20px 0;
+        text-align: justify;
+    }
+    .news-img{
+        width: 50px;
+        height: 50px;
+    }
+    .news-text{
+      word-break: normal;
+    }
+    .news__more{
+      text-align: right;
     }
   }
 }
