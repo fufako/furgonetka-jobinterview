@@ -10,7 +10,7 @@ function App() {
 
   let location = useLocation()
 
-  const addToCart = (item) => {
+  const addToSaldo = (item) => {
     const nameToFind = item.name
     const exists = Boolean(items.find((item) => item.name === nameToFind))
     if (!exists) {
@@ -30,14 +30,14 @@ function App() {
     setActive(location.pathname)
   }, [location])
   return (
-    <div className="main">
+    <>
       <Header
         items={items}
-        addToCart={addToCart}
+        addToSaldo={addToSaldo}
         removeFromCart={removeFromCart}
         active={active}
       />
-    </div>
+    </>
   )
 }
 

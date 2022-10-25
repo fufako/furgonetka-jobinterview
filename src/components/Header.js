@@ -8,7 +8,7 @@ import SendIcon from "../images/send_icon.png"
 import { useEffect } from "react"
 import { useRef } from "react"
 const Header = (props) => {
-  const { items, addToCart, handleTotal, removeFromCart, active } = props
+  const { items, addToSaldo, handleTotal, removeFromCart, active } = props
 
   const panelNav = useRef()
   const sendNav = useRef()
@@ -73,7 +73,7 @@ const Header = (props) => {
         <Route path="/furgonetka/" element={<Panel />} />
         <Route
           path="furgonetka/do-wyslania"
-          element={<Send addToCart={addToCart} handleTotal={handleTotal} />}
+          element={<Send addToSaldo={addToSaldo} handleTotal={handleTotal} />}
         />
 
         <Route

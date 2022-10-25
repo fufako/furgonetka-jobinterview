@@ -15,6 +15,7 @@
   padding: 0 15%;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px!important;
+  height: 100vh;
 }
 .header{
   display: flex;
@@ -63,10 +64,18 @@
       .navigation__text{
         color:@secondary-background;
     }
-
-    }
+  }
+  .navigation__panel--active:hover, .navigation__do-wyslania--active:hover{
+    background-color: @primary-theme;
+    .navigation__text{
+      color:@secondary-background;
+  }
+}
     .navigation__panel:hover, .navigation__do-wyslania:hover{
       background: linear-gradient(180deg,#6EA6D6 20.31%,#6696BF 100%);
+      .navigation__text{
+        color:@secondary-background;
+    }
     }
   }
   .navigation__underline-container{
@@ -251,6 +260,25 @@
       a:hover {
         color: @secondary-theme;
       }
+    }
+  }
+}
+
+.send{
+  .send__items-container{
+    display: flex;
+    flex-direction: column;
+    background-color: @secondary-background;
+    border-radius: 8px;
+    padding: 45px;
+    .send__item{
+      display: flex;
+      align-items: center;
+      gap:20px
+    }
+    .send__item-img{
+      width: 80px;
+      height: 80px;
     }
   }
 }
