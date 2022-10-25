@@ -6,11 +6,15 @@ import "./App.css"
 function App() {
   const [items, setItems] = useState([])
   const [total, setTotal] = useState(0)
-  const [active, setActive] = useState()
+  const [active, setActive] = useState("")
 
   let location = useLocation()
 
   const addToSaldo = (item) => {
+    if (items.length >= 8) {
+      alert("You can only send 8 packages at once!")
+      return
+    }
     setItems((prevItems) => [...prevItems, item])
     setTotal(total + Math.round(item.price.slice(0, -3) * 100) / 100)
 

@@ -14,7 +14,7 @@
   background-color: #f4f9fc;
   padding: 0 15%;
   font-family: 'Open Sans', sans-serif;
-  font-size: 13px!important;
+  font-size: 1rem;
   height: 100vh;
 }
 .header {
@@ -102,6 +102,7 @@
 .dashboard {
   display: flex;
   gap: 15px;
+  min-width: 500px;
 }
 .dashboard .dashboard__main-container {
   width: 70%;
@@ -214,6 +215,7 @@
 }
 .verify-number .verify-number__container .verify-number__content .verify-number__button {
   color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
   width: fit-content;
   min-width: 120px;
   padding: 8px 18px;
@@ -268,6 +270,7 @@
   background-color: #ffffff;
   border-radius: 8px;
   padding: 45px;
+  box-shadow: 0 2px 32px rgba(6, 83, 146, 0.04), 0 0 0 1px #e7eff6;
 }
 .send .send__items-container .send__item {
   display: flex;
@@ -277,6 +280,17 @@
 .send .send__items-container .send__item-img {
   width: 80px;
   height: 80px;
+}
+.send .send__items-container .send__item-send {
+  background-color: #ffd91e;
+  border: #f3c300 solid 1px;
+  padding: 5px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 4px;
+}
+.send .send__items-container .send__item-send:hover {
+  box-shadow: 0 1px 2px 0 rgba(34, 34, 34, 0.15), 0 0 0 1px #f3c300;
+  background-color: #ffe44a;
 }
 .empty-saldo {
   display: flex;
@@ -293,6 +307,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
+  box-shadow: 0 2px 32px rgba(6, 83, 146, 0.04), 0 0 0 1px #e7eff6;
 }
 .empty-saldo .empty-saldo__container .empty-saldo__img {
   width: 200px;
@@ -310,6 +325,7 @@
   border-radius: 8px;
   padding: 45px;
   width: 70%;
+  box-shadow: 0 2px 32px rgba(6, 83, 146, 0.04), 0 0 0 1px #e7eff6;
 }
 .saldo .saldo__items-container .saldo__item {
   display: flex;
@@ -327,5 +343,6 @@
   padding: 15px;
   width: 25%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  box-shadow: 0 2px 32px rgba(6, 83, 146, 0.04), 0 0 0 1px #e7eff6;
 }

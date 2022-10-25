@@ -32,7 +32,7 @@ const Saldo = (props) => {
           </div>
           <div className="saldo__total">
             <h4 className="saldo__total-title">Razem: &nbsp;</h4>
-            {total}
+            {Math.round(total * 100) / 100}
             &nbsp;zł{" "}
           </div>{" "}
         </div>
