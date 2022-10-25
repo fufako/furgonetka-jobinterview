@@ -2,31 +2,32 @@ import { Routes, Route, Link } from "react-router-dom"
 import Panel from "./Panel"
 import Saldo from "./Saldo"
 import Send from "./Send"
-
+import Logo from "../images/furgonetka.png"
 function Header(props) {
   const { items, addToCart, handleTotal, removeFromCart } = props
   return (
     <>
-      <div className="header">
-        <Link to="FunnySocks" className="panel">
-          <h1>
-            {" "}
-            <span className="orange">Funny </span> Socks Shop
-          </h1>
+      <header className="header">
+        <Link to="furgonetka">
+          <img src={Logo} alt="logo-furgonetka" className="header__logo" />
         </Link>
+        <Link to="furgonetka/saldo">
+          <div className="header__saldo">Saldo</div>
+        </Link>
+      </header>
 
-        <div className="nav">
-          <Link className="nav-link" to="furgonetka">
-            Home{" "}
-          </Link>
-          <Link className="nav-link" to="furgonetka/do-wyslania">
+      <nav className="navigation">
+        <Link to="furgonetka">
+          <div className="navigation__panel navigation__panel--active">
+            Panel
+          </div>
+        </Link>
+        <Link to="furgonetka/do-wyslania">
+          <div className="navigation__do-wyslania navigation__do-wyslania--active">
             Do wysłania
-          </Link>
-          <Link className="nav-link" to="furgonetka/saldo">
-            Saldo
-          </Link>
-        </div>
-      </div>
+          </div>
+        </Link>
+      </nav>
 
       <Routes>
         <Route path="/furgonetka/" element={<Panel />} />
