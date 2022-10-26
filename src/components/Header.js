@@ -1,14 +1,16 @@
 import { Routes, Route, Link } from "react-router-dom"
+import { useEffect } from "react"
+import { useRef } from "react"
+
 import Panel from "./Panel"
 import Saldo from "./Saldo"
 import Send from "./Send"
 import Logo from "../images/furgonetka.png"
 import PanelIcon from "../images/panel_icon.png"
 import SendIcon from "../images/send_icon.png"
-import { useEffect } from "react"
-import { useRef } from "react"
+
 const Header = (props) => {
-  const { items, addToSaldo, removeFromSaldo, active, total } = props
+  const { items, addToSaldo, active, total } = props
 
   const panelNav = useRef()
   const sendNav = useRef()
@@ -89,13 +91,7 @@ const Header = (props) => {
 
         <Route
           path="furgonetka/saldo"
-          element={
-            <Saldo
-              items={items}
-              removeFromSaldo={removeFromSaldo}
-              total={total}
-            />
-          }
+          element={<Saldo items={items} total={total} />}
         />
       </Routes>
     </>

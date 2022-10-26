@@ -23,12 +23,16 @@ const Panel = () => {
             </div>
             <div className="promotion__additional-info-container">
               <div className="promotion__image-container">
-                <img src={Man} alt="" className="promotion__image" />
+                <img
+                  src={Man}
+                  alt="man-standing"
+                  className="promotion__image"
+                />
               </div>
 
               <div className="promotion__costs">
                 <p>
-                  Koszt wysyłki{" "}
+                  Koszt wysyłki
                   <span className="promotion__strong">&nbsp;4 paczek</span>
                 </p>
                 <div className="promotion__courier-container">

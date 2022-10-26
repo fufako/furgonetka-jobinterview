@@ -1,7 +1,7 @@
-import Header from "./components/Header"
 import React, { useState, useEffect } from "react"
 import { useLocation } from "react-router-dom"
 import "./App.css"
+import Header from "./components/Header"
 
 function App() {
   const [items, setItems] = useState([])
@@ -17,14 +17,6 @@ function App() {
     }
     setItems((prevItems) => [...prevItems, item])
     setTotal(total + Math.round(item.price.slice(0, -3) * 100) / 100)
-
-    console.log(item)
-  }
-  console.log(items)
-
-  const removeFromSaldo = (item) => {
-    const keyToRemove = item.key
-    setItems(items.filter((item) => item.key !== keyToRemove))
   }
 
   useEffect(() => {
@@ -35,7 +27,6 @@ function App() {
       <Header
         items={items}
         addToSaldo={addToSaldo}
-        removeFromSaldo={removeFromSaldo}
         active={active}
         total={total}
       />

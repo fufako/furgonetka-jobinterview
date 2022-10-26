@@ -1,14 +1,6 @@
-import { useEffect } from "react"
-import { useState } from "react"
 import EmptySaldo from "./EmptySaldo"
 const Saldo = (props) => {
-  const { items, removeFromSaldo, total } = props
-
-  const handleRemove = (item) => {
-    console.log("Before removeFormCart: " + items)
-    removeFromSaldo(item)
-    console.log("After removeFormCart: " + items)
-  }
+  const { items, total } = props
 
   return (
     <>
@@ -33,8 +25,8 @@ const Saldo = (props) => {
           <div className="saldo__total">
             <h4 className="saldo__total-title">Razem: &nbsp;</h4>
             {Math.round(total * 100) / 100}
-            &nbsp;zł{" "}
-          </div>{" "}
+            &nbsp;zł
+          </div>
         </div>
       ) : (
         <EmptySaldo />

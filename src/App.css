@@ -14,7 +14,7 @@
   background-color: #f4f9fc;
   padding: 0 15%;
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   height: 100vh;
 }
 .header {
@@ -51,6 +51,10 @@
   align-items: center;
   gap: 5px;
   border-radius: 8px 8px 0 0;
+}
+.navigation__panel a,
+.navigation__do-wyslania a {
+  text-decoration: none;
 }
 .navigation__text {
   color: #689cca;
@@ -132,6 +136,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
+  height: 150px;
 }
 .promotion__image-container {
   width: 220px;
@@ -316,6 +321,7 @@
   padding: 45px;
   width: 70%;
   box-shadow: 0 2px 32px rgba(6, 83, 146, 0.04), 0 0 0 1px #e7eff6;
+  min-width: 320px;
 }
 .saldo__item {
   display: flex;
@@ -335,4 +341,5 @@
   display: flex;
   align-items: flex-end;
   box-shadow: 0 2px 32px rgba(6, 83, 146, 0.04), 0 0 0 1px #e7eff6;
+  min-width: 250px;
 }
