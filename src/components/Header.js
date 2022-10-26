@@ -16,12 +16,12 @@ const Header = (props) => {
   const sendNav = useRef()
 
   const handleActive = (active) => {
-    if (active === "/furgonetka") {
+    if (active === "/furgonetka-jobinterview") {
       panelNav.current.classList.add("navigation__panel--active")
       sendNav.current.classList.remove("navigation__do-wyslania--active")
       return
     }
-    if (active === "/furgonetka/do-wyslania") {
+    if (active === "/furgonetka-jobinterview/do-wyslania") {
       sendNav.current.classList.add("navigation__do-wyslania--active")
       panelNav.current.classList.remove("navigation__panel--active")
       return
@@ -38,10 +38,13 @@ const Header = (props) => {
   return (
     <>
       <header className="header">
-        <Link to="furgonetka">
+        <Link to="furgonetka-jobinterview">
           <img src={Logo} alt="logo-furgonetka" className="header__logo" />
         </Link>
-        <Link to="furgonetka/saldo" style={{ textDecoration: "none" }}>
+        <Link
+          to="furgonetka-jobinterview/saldo"
+          style={{ textDecoration: "none" }}
+        >
           <div
             className="header__saldo"
             onClick={() => {
@@ -55,7 +58,7 @@ const Header = (props) => {
 
       <nav className="navigation">
         <div className="navigation__tabs-container">
-          <Link to="furgonetka" style={{ textDecoration: "none" }}>
+          <Link to="furgonetka-jobinterview" style={{ textDecoration: "none" }}>
             <div className="navigation__panel" ref={panelNav}>
               <img
                 src={PanelIcon}
@@ -65,7 +68,10 @@ const Header = (props) => {
               <p className="navigation__text">Panel</p>
             </div>
           </Link>
-          <Link to="furgonetka/do-wyslania" style={{ textDecoration: "none" }}>
+          <Link
+            to="furgonetka-jobinterview/do-wyslania"
+            style={{ textDecoration: "none" }}
+          >
             <div className="navigation__do-wyslania" ref={sendNav}>
               <img
                 src={SendIcon}
@@ -83,14 +89,14 @@ const Header = (props) => {
       </nav>
 
       <Routes>
-        <Route path="/furgonetka/" element={<Panel />} />
+        <Route path="/furgonetka-jobinterview/" element={<Panel />} />
         <Route
-          path="furgonetka/do-wyslania"
+          path="furgonetka-jobinterview/do-wyslania"
           element={<Send addToSaldo={addToSaldo} />}
         />
 
         <Route
-          path="furgonetka/saldo"
+          path="furgonetka-jobinterview/saldo"
           element={<Saldo items={items} total={total} />}
         />
       </Routes>
