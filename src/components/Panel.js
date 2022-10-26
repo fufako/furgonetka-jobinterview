@@ -99,23 +99,23 @@ const Panel = () => {
         <div className="dashboard__side-container">
           <section className="dashboard__news news">
             <h4>Aktualności na blogu</h4>
-            <div className="news-item">
-              <img src={NewsIcon1} alt="news-icon" className="news-img" />
-              <p className="news-text">
+            <div className="news__item">
+              <img src={NewsIcon1} alt="news-icon" className="news__img" />
+              <p className="news__text">
                 Zmiany w metodach nadania i dostawy w formularzu zamówienia na
                 Furgonetka.pl
               </p>
             </div>
-            <div className="news-item">
-              <img src={NewsIcon2} alt="news-icon" className="news-img" />
-              <p className="news-text">
+            <div className="news__item">
+              <img src={NewsIcon2} alt="news-icon" className="news__img" />
+              <p className="news__text">
                 Nowy przewoźnik przesyłek paletowych Pall-Ex w ofercie
                 Furgonetki
               </p>
             </div>
-            <div className="news-item">
-              <img src={NewsIcon3} alt="news-icon" className="news-img" />
-              <p className="news-text">
+            <div className="news__item">
+              <img src={NewsIcon3} alt="news-icon" className="news__img" />
+              <p className="news__text">
                 Dopłaty UPS za duże paczki i elementy niestandardowe w okresie
                 szczytu paczkowego
               </p>
