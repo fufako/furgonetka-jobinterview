@@ -115,6 +115,7 @@
   border-radius: 8px;
   height: fit-content;
   box-shadow: 0 2px 32px rgba(6, 83, 146, 0.04), 0 0 0 1px #e7eff6;
+  min-width: 600px;
 }
 .promotion__strong {
   font-weight: bold;
@@ -224,6 +225,7 @@
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 32px rgba(6, 83, 146, 0.04), 0 0 0 1px #e7eff6;
+  min-width: 240px;
 }
 .news__item {
   display: flex;
