@@ -12,7 +12,7 @@ function App() {
 
   const addToSaldo = (item) => {
     if (items.length >= 8) {
-      alert("You can only send 8 packages at once!")
+      alert("You can only send only 8 packages at once!")
       return
     }
     setItems((prevItems) => [...prevItems, item])
