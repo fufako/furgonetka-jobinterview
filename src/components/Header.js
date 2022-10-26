@@ -1,40 +1,19 @@
-import { Routes, Route, Link } from "react-router-dom"
-import { useEffect } from "react"
-import { useRef } from "react"
+import { Link, useLocation } from "react-router-dom"
 
-import Panel from "./Panel"
-import Saldo from "./Saldo"
-import Send from "./Send"
 import Logo from "../images/furgonetka.png"
 import PanelIcon from "../images/panel_icon.png"
 import SendIcon from "../images/send_icon.png"
 
-const Header = (props) => {
-  const { items, addToSaldo, active, total } = props
+const PANEL_URL = "/furgonetka-jobinterview"
+const SEND_URL = "/furgonetka-jobinterview/do-wyslania"
 
-  const panelNav = useRef()
-  const sendNav = useRef()
+const Header = ({ totalPrice }) => {
+  console.log("totalPrice", totalPrice)
+  const location = useLocation()
 
-  const handleActive = (active) => {
-    if (active === "/furgonetka-jobinterview") {
-      panelNav.current.classList.add("navigation__panel--active")
-      sendNav.current.classList.remove("navigation__do-wyslania--active")
-      return
-    }
-    if (active === "/furgonetka-jobinterview/do-wyslania") {
-      sendNav.current.classList.add("navigation__do-wyslania--active")
-      panelNav.current.classList.remove("navigation__panel--active")
-      return
-    }
-  }
-  const resetActive = () => {
-    sendNav.current.classList.remove("navigation__do-wyslania--active")
-    panelNav.current.classList.remove("navigation__panel--active")
-  }
+  const isPanelActive = location.pathname === PANEL_URL
+  const isSendActive = location.pathname === SEND_URL
 
-  useEffect(() => {
-    handleActive(active)
-  }, [active])
   return (
     <>
       <header className="header">
@@ -45,21 +24,18 @@ const Header = (props) => {
           to="furgonetka-jobinterview/saldo"
           style={{ textDecoration: "none" }}
         >
-          <div
-            className="header__saldo"
-            onClick={() => {
-              resetActive()
-            }}
-          >
-            Saldo: {Math.round(total * 100) / 100} zł
-          </div>
+          <div className="header__saldo">Saldo: {totalPrice.toFixed(2)} zł</div>
         </Link>
       </header>
 
       <nav className="navigation">
         <div className="navigation__tabs-container">
           <Link to="furgonetka-jobinterview" style={{ textDecoration: "none" }}>
-            <div className="navigation__panel" ref={panelNav}>
+            <div
+              className={`navigation__panel ${
+                isPanelActive ? "navigation__panel--active" : ""
+              }`}
+            >
               <img
                 src={PanelIcon}
                 alt="panel-icon"
@@ -72,7 +48,11 @@ const Header = (props) => {
             to="furgonetka-jobinterview/do-wyslania"
             style={{ textDecoration: "none" }}
           >
-            <div className="navigation__do-wyslania" ref={sendNav}>
+            <div
+              className={`navigation__do-wyslania ${
+                isSendActive ? "navigation__do-wyslania--active" : ""
+              }`}
+            >
               <img
                 src={SendIcon}
                 alt="send-icon"
@@ -87,19 +67,6 @@ const Header = (props) => {
           <div className="navigation__lower-underline"></div>
         </div>
       </nav>
-
-      <Routes>
-        <Route path="/furgonetka-jobinterview/" element={<Panel />} />
-        <Route
-          path="furgonetka-jobinterview/do-wyslania"
-          element={<Send addToSaldo={addToSaldo} />}
-        />
-
-        <Route
-          path="furgonetka-jobinterview/saldo"
-          element={<Saldo items={items} total={total} />}
-        />
-      </Routes>
     </>
   )
 }

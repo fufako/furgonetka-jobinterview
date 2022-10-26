@@ -4,16 +4,17 @@ const Send = (props) => {
     {
       src: Package,
       name: "Duża paczka | DPD",
-      price: "10.99 zł",
+      price: 10.99,
       key: 0,
     },
     {
       src: Package,
       name: "Duża paczka | UPS",
-      price: "5.99 zł",
+      price: 5.99,
       key: 1,
     },
   ]
+
   const { addToSaldo } = props
   return (
     <>

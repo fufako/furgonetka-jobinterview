@@ -13,10 +13,8 @@ const Panel = () => {
             <div className="promotion__main-info">
               Stefan prowadzi mały sklep internetowy z modelami statków do
               sklejania. Dziennie wysyła
-              <span className="promotion__strong">
-                &nbsp;od 2 do 4 paczek&nbsp;
-              </span>
-              o wadze około <span className="promotion__strong">5 kg</span>. Z
+              <span className="promotion__strong"> od 2 do 4 paczek </span>o
+              wadze około <span className="promotion__strong">5 kg</span>. Z
               uwagi na to, że wszystko w ostatnim czasie drożeje, Stefan
               postanowił przeliczyć, ile kosztuje go wysyłanie paczek obecnie i
               ile może zaoszczędzić wybierając innego kuriera.
@@ -33,17 +31,17 @@ const Panel = () => {
               <div className="promotion__costs">
                 <p>
                   Koszt wysyłki
-                  <span className="promotion__strong">&nbsp;4 paczek</span>
+                  <span className="promotion__strong"> 4 paczek</span>
                 </p>
-                <div className="promotion__courier-container">
-                  <span className="promotion__courier-fedex">
-                    Fed<span>Ex</span>
-                  </span>
-                  <span className="promotion__price">
-                    {" "}
-                    <span className="promotion__strong">67,36 zł</span>
-                  </span>
-                </div>
+                <CourierItem
+                  classSuffix={"fedex"}
+                  price={62.35}
+                  text={
+                    <>
+                      Fed<span>Ex</span>
+                    </>
+                  }
+                />
                 <div className="promotion__courier-container">
                   <span className="promotion__courier-dpd">DPD</span>
                   <span className="promotion__price">
@@ -67,9 +65,9 @@ const Panel = () => {
                 </div>
               </div>
               <div className="promotion__savings">
-                Stefan&nbsp;
+                Stefan{" "}
                 <span className="promotion__strong">
-                  oszczędza miesięcznie od 752 zł do 1 156 zł &nbsp;
+                  oszczędza miesięcznie od 752 zł do 1 156 zł{" "}
                 </span>
                 na zmianie swojego dostawcy usług kurierskich. <br />
                 <br /> Bądź jak Stefan - oszczędzaj analizując, która oferta
@@ -136,3 +134,12 @@ const Panel = () => {
 }
 
 export default Panel
+
+const CourierItem = ({ price, text, classSuffix }) => (
+  <div className="promotion__courier-container">
+    <span className={`promotion__courier-${classSuffix}`}>{text}</span>
+    <span className="promotion__price">
+      <span className="promotion__strong">{price} zł</span>
+    </span>
+  </div>
+)

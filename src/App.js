@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react"
-import { useLocation } from "react-router-dom"
+import React, { useState } from "react"
+import { Route, Routes } from "react-router-dom"
 import "./App.css"
 import Header from "./components/Header"
+import Panel from "./components/Panel"
+import Saldo from "./components/Saldo"
+import Send from "./components/Send"
 
 function App() {
   const [items, setItems] = useState([])
-  const [total, setTotal] = useState(0)
-  const [active, setActive] = useState("")
-
-  let location = useLocation()
+  const totalPrice = items.reduce((acc, { price }) => acc + price, 0)
 
   const addToSaldo = (item) => {
     if (items.length >= 8) {
@@ -16,20 +16,22 @@ function App() {
       return
     }
     setItems((prevItems) => [...prevItems, item])
-    setTotal(total + Math.round(item.price.slice(0, -3) * 100) / 100)
   }
 
-  useEffect(() => {
-    setActive(location.pathname)
-  }, [location, items])
   return (
     <>
-      <Header
-        items={items}
-        addToSaldo={addToSaldo}
-        active={active}
-        total={total}
-      />
+      <Header totalPrice={totalPrice} />
+      <Routes>
+        <Route path="furgonetka-jobinterview" element={<Panel />} />
+        <Route
+          path="furgonetka-jobinterview/do-wyslania"
+          element={<Send addToSaldo={addToSaldo} />}
+        />
+        <Route
+          path="furgonetka-jobinterview/saldo"
+          element={<Saldo items={items} totalPrice={totalPrice} />}
+        />
+      </Routes>
     </>
   )
 }

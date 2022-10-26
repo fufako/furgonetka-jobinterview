@@ -1,6 +1,6 @@
 import EmptySaldo from "./EmptySaldo"
 const Saldo = (props) => {
-  const { items, total } = props
+  const { items, totalPrice } = props
 
   return (
     <>
@@ -8,8 +8,8 @@ const Saldo = (props) => {
         <div className="saldo">
           {" "}
           <div className="saldo__items-container">
-            {items.map((item) => (
-              <div className="saldo__item" key={item.key}>
+            {items.map((item, i) => (
+              <div className="saldo__item" key={i}>
                 <img
                   src={item.src}
                   alt="package-icon"
@@ -24,7 +24,7 @@ const Saldo = (props) => {
           </div>
           <div className="saldo__total">
             <h4 className="saldo__total-title">Razem: &nbsp;</h4>
-            {Math.round(total * 100) / 100}
+            {Math.round(totalPrice * 100) / 100}
             &nbsp;zł
           </div>
         </div>
