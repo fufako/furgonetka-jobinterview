@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/furgonetka-jobinterview/static/css/main.c53de5b0.css",
-    "main.js": "/furgonetka-jobinterview/static/js/main.b1fcafae.js",
+    "main.js": "/furgonetka-jobinterview/static/js/main.6efe1622.js",
     "static/media/package.png": "/furgonetka-jobinterview/static/media/package.f7790fd2b481d6c4dff9.png",
     "static/media/sad-package.png": "/furgonetka-jobinterview/static/media/sad-package.6640895aeb54893b3764.png",
     "static/media/man.png": "/furgonetka-jobinterview/static/media/man.b776aefd4b145aeca9d8.png",
@@ -11,10 +11,10 @@
     "static/media/phone-icon.png": "/furgonetka-jobinterview/static/media/phone-icon.95049de7838f6f1bf7ab.png",
     "index.html": "/furgonetka-jobinterview/index.html",
     "main.c53de5b0.css.map": "/furgonetka-jobinterview/static/css/main.c53de5b0.css.map",
-    "main.b1fcafae.js.map": "/furgonetka-jobinterview/static/js/main.b1fcafae.js.map"
+    "main.6efe1622.js.map": "/furgonetka-jobinterview/static/js/main.6efe1622.js.map"
   },
   "entrypoints": [
     "static/css/main.c53de5b0.css",
-    "static/js/main.b1fcafae.js"
+    "static/js/main.6efe1622.js"
   ]
 }
