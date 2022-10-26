@@ -17,6 +17,11 @@
   font-size: 0.9rem;
   height: 100vh;
 }
+@media (max-width: 1320px) {
+  #root {
+    height: auto;
+  }
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -75,8 +80,8 @@
 .navigation__do-wyslania--active:hover {
   background-color: #689cca;
 }
-.navigation__panel--active:hover .navigation__text,
-.navigation__do-wyslania--active:hover .navigation__text {
+.navigation__panel--active:hover__text,
+.navigation__do-wyslania--active:hover__text {
   color: #ffffff;
 }
 .navigation__panel:hover,
@@ -89,6 +94,7 @@
 }
 .navigation__underline-container {
   height: 25px;
+  min-width: 650px;
 }
 .navigation__upper-underline {
   height: 5px;
@@ -113,6 +119,11 @@
   height: 100%;
   width: 30%;
 }
+@media (max-width: 1320px) {
+  .dashboard {
+    flex-wrap: wrap;
+  }
+}
 .promotion {
   background-color: #ffffff;
   padding: 25px;
@@ -132,14 +143,29 @@
   padding: 25px 25px 25px 290px;
   line-height: 1.4rem;
 }
+@media (max-width: 968px) {
+  .promotion__main-info {
+    padding: 25px;
+  }
+}
 .promotion__additional-info-container {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
   height: 150px;
 }
+@media (max-width: 968px) {
+  .promotion__additional-info-container {
+    justify-content: space-evenly;
+  }
+}
 .promotion__image-container {
   width: 220px;
+}
+@media (max-width: 968px) {
+  .promotion__image-container {
+    display: none;
+  }
 }
 .promotion__image {
   width: 160px;
@@ -194,6 +220,7 @@
   border-radius: 8px;
   border: 2px solid rgba(4, 109, 180, 0.6);
   box-shadow: 0 2px 32px rgba(6, 83, 146, 0.04), 0 0 0 1px #e7eff6;
+  min-width: 600px;
 }
 .verify-number__strong {
   font-weight: bold;
@@ -230,7 +257,11 @@
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 32px rgba(6, 83, 146, 0.04), 0 0 0 1px #e7eff6;
-  min-width: 240px;
+}
+@media (max-width: 1320px) {
+  .news {
+    width: 600px;
+  }
 }
 .news__item {
   display: flex;
@@ -259,6 +290,9 @@
 .news__more a:hover {
   color: #81b3db;
 }
+.send {
+  height: 100vh;
+}
 .send__items-container {
   display: flex;
   flex-direction: column;
@@ -266,6 +300,7 @@
   border-radius: 8px;
   padding: 45px;
   box-shadow: 0 2px 32px rgba(6, 83, 146, 0.04), 0 0 0 1px #e7eff6;
+  min-width: 560px;
 }
 .send__item {
   display: flex;
@@ -312,6 +347,12 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
+}
+@media (max-width: 968px) {
+  .saldo {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 .saldo__items-container {
   display: flex;
