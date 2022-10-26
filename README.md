@@ -1,5 +1,5 @@
 # Mockup website
-Mockup website for a jobinterview created using BEM methodology, LESS and React
+Mockup website for a job interview created using BEM methodology, LESS and React
 ## Demo
 <a href="https://fufako.github.io/furgonetka-jobinterview"> Here </a>
 ## Preview
