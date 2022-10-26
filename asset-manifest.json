@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/furgonetka-jobinterview/static/css/main.c53de5b0.css",
-    "main.js": "/furgonetka-jobinterview/static/js/main.b1fcafae.js",
-    "static/media/package.png": "/furgonetka-jobinterview/static/media/package.f7790fd2b481d6c4dff9.png",
-    "static/media/sad-package.png": "/furgonetka-jobinterview/static/media/sad-package.6640895aeb54893b3764.png",
-    "static/media/man.png": "/furgonetka-jobinterview/static/media/man.b776aefd4b145aeca9d8.png",
-    "static/media/news-icon1.png": "/furgonetka-jobinterview/static/media/news-icon1.78f8fa39986e7c2fc6c4.png",
-    "static/media/news-icon3.png": "/furgonetka-jobinterview/static/media/news-icon3.89e1843bf24eb7bd05d0.png",
-    "static/media/news-icon2.png": "/furgonetka-jobinterview/static/media/news-icon2.6ae364784518ff139f3a.png",
-    "static/media/phone-icon.png": "/furgonetka-jobinterview/static/media/phone-icon.95049de7838f6f1bf7ab.png",
-    "index.html": "/furgonetka-jobinterview/index.html",
-    "main.c53de5b0.css.map": "/furgonetka-jobinterview/static/css/main.c53de5b0.css.map",
-    "main.b1fcafae.js.map": "/furgonetka-jobinterview/static/js/main.b1fcafae.js.map"
+    "main.css": "/furgonetka/static/css/main.c53de5b0.css",
+    "main.js": "/furgonetka/static/js/main.49b1f870.js",
+    "static/media/package.png": "/furgonetka/static/media/package.f7790fd2b481d6c4dff9.png",
+    "static/media/sad-package.png": "/furgonetka/static/media/sad-package.6640895aeb54893b3764.png",
+    "static/media/man.png": "/furgonetka/static/media/man.b776aefd4b145aeca9d8.png",
+    "static/media/news-icon1.png": "/furgonetka/static/media/news-icon1.78f8fa39986e7c2fc6c4.png",
+    "static/media/news-icon3.png": "/furgonetka/static/media/news-icon3.89e1843bf24eb7bd05d0.png",
+    "static/media/news-icon2.png": "/furgonetka/static/media/news-icon2.6ae364784518ff139f3a.png",
+    "static/media/phone-icon.png": "/furgonetka/static/media/phone-icon.95049de7838f6f1bf7ab.png",
+    "index.html": "/furgonetka/index.html",
+    "main.c53de5b0.css.map": "/furgonetka/static/css/main.c53de5b0.css.map",
+    "main.49b1f870.js.map": "/furgonetka/static/js/main.49b1f870.js.map"
   },
   "entrypoints": [
     "static/css/main.c53de5b0.css",
-    "static/js/main.b1fcafae.js"
+    "static/js/main.49b1f870.js"
   ]
 }
