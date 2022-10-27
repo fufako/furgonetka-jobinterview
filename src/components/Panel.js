@@ -42,27 +42,21 @@ const Panel = () => {
                     </>
                   }
                 />
-                <div className="promotion__courier-container">
-                  <span className="promotion__courier-dpd">DPD</span>
-                  <span className="promotion__price">
-                    {" "}
-                    <span className="promotion__strong">77,52 zł</span>
-                  </span>
-                </div>
-                <div className="promotion__courier-container">
-                  <span className="promotion__courier-dhl">DHL</span>
-                  <span className="promotion__price">
-                    {" "}
-                    <span className="promotion__strong">83,64 zł</span>
-                  </span>
-                </div>
-                <div className="promotion__courier-container">
-                  <span className="promotion__courier-ups">UPS</span>
-                  <span className="promotion__price">
-                    {" "}
-                    <span className="promotion__strong">117,64 zł</span>
-                  </span>
-                </div>
+                <CourierItem
+                  classSuffix={"dpd"}
+                  price={77.52}
+                  text={<>DPD</>}
+                />
+                <CourierItem
+                  classSuffix={"dhl"}
+                  price={83.64}
+                  text={<>DHL</>}
+                />
+                <CourierItem
+                  classSuffix={"ups"}
+                  price={117.64}
+                  text={<>UPS</>}
+                />
               </div>
               <div className="promotion__savings">
                 Stefan{" "}
